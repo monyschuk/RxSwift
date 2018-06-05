@@ -390,8 +390,8 @@ extension Reactive where Base: UISegmentedControl {
                     if value != nil {
                         let transition = CATransition()
                         transition.duration = 0.25
-                        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-                        transition.type = transitionType
+                        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+                        transition.type = CATransitionType(rawValue: transitionType)
                         control.layer?.add(transition, forKey: kCATransition)
                     }
                 }

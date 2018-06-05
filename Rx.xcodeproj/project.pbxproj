@@ -3883,7 +3883,7 @@
 						LastSwiftMigration = 0800;
 					};
 					C809396F1B8A71840088E94D = {
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1000;
 					};
 					C8093B4B1B8A71F00088E94D = {
 						LastSwiftMigration = 0800;
@@ -3907,7 +3907,7 @@
 						LastSwiftMigration = 0800;
 					};
 					C88BB81A1B07E5ED0064D411 = {
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1000;
 					};
 					C88FA4FD1C25C44800CCFEA4 = {
 						LastSwiftMigration = 0800;
@@ -6004,6 +6004,7 @@
 				PRODUCT_NAME = RxCocoa;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -6023,6 +6024,7 @@
 				PRODUCT_NAME = RxCocoa;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -6042,6 +6044,7 @@
 				PRODUCT_NAME = RxCocoa;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = "Release-Tests";
 		};
@@ -6454,6 +6457,7 @@
 				PRODUCT_NAME = RxSwift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = "Release-Tests";
 		};
@@ -6473,6 +6477,7 @@
 				PRODUCT_NAME = RxSwift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -6492,6 +6497,7 @@
 				PRODUCT_NAME = RxSwift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
