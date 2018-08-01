@@ -188,6 +188,20 @@ final class DisposableTest_ : DisposableTest, RxTestCase {
     ] }
 }
 
+final class DisposeBagTest_ : DisposeBagTest, RxTestCase {
+    #if os(macOS)
+    required override init() {
+        super.init()
+    }
+    #endif
+
+    static var allTests: [(String, (DisposeBagTest_) -> () -> ())] { return [
+    ("testDisposeBagInsert", DisposeBagTest.testDisposeBagInsert),
+    ("testDisposeBagVaradicInsert", DisposeBagTest.testDisposeBagVaradicInsert),
+    ("testDisposeBagVaradicInsertArray", DisposeBagTest.testDisposeBagVaradicInsertArray),
+    ] }
+}
+
 final class DriverTest_ : DriverTest, RxTestCase {
     #if os(macOS)
     required override init() {
@@ -1151,11 +1165,17 @@ final class ObservableScanTest_ : ObservableScanTest, RxTestCase {
 
     static var allTests: [(String, (ObservableScanTest_) -> () -> ())] { return [
     ("testScan_Seed_Never", ObservableScanTest.testScan_Seed_Never),
+    ("testScan_Into_Never", ObservableScanTest.testScan_Into_Never),
     ("testScan_Seed_Empty", ObservableScanTest.testScan_Seed_Empty),
+    ("testScan_Into_Empty", ObservableScanTest.testScan_Into_Empty),
     ("testScan_Seed_Return", ObservableScanTest.testScan_Seed_Return),
+    ("testScan_Into_Accumulate", ObservableScanTest.testScan_Into_Accumulate),
     ("testScan_Seed_Throw", ObservableScanTest.testScan_Seed_Throw),
+    ("testScan_Into_Throw", ObservableScanTest.testScan_Into_Throw),
     ("testScan_Seed_SomeData", ObservableScanTest.testScan_Seed_SomeData),
+    ("testScan_Into_SomeData", ObservableScanTest.testScan_Into_SomeData),
     ("testScan_Seed_AccumulatorThrows", ObservableScanTest.testScan_Seed_AccumulatorThrows),
+    ("testScan_Into_AccumulatorThrows", ObservableScanTest.testScan_Into_AccumulatorThrows),
     ] }
 }
 
@@ -1975,6 +1995,7 @@ func XCTMain(_ tests: [() -> ()]) {
         testCase(ConcurrentDispatchQueueSchedulerTests_.allTests),
         testCase(CurrentThreadSchedulerTest_.allTests),
         testCase(DisposableTest_.allTests),
+        testCase(DisposeBagTest_.allTests),
         testCase(DriverTest_.allTests),
         testCase(EventTests_.allTests),
         testCase(HistoricalSchedulerTest_.allTests),
